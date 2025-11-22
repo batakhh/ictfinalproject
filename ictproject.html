@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gothic Jewels</title>
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Gothic fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Playfair:ital,wght@0,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="goth.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="ictproject.html" class="logo">
+        <i class="fa-solid fa-gem logo-icon"></i>
+        <div class="logo-text">Gothic<span>Jewels</span></div>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="ictproject.html">Home</a></li>
+          <li><a href="#products">Jewelry</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+
+        <!-- ABOUT BUTTON ON THE RIGHT -->
+        <button onclick="window.location.href='about.html'" class="about-btn">
+          About
+        </button>
+
+        <a href="loginpage.html" class="btn btn-secondary">Sign In</a>
+        <a href="cart.html" class="btn btn-primary">Cart 🛒</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-subtitle">
+          <i class="fas fa-crow"></i>
+        </div>
+        <h1 class="hero-title">Elegance in Darkness</h1>
+        <p class="hero-text">
+          Discover handcrafted gothic jewelry that whispers mystery, power, and timeless beauty.
+        </p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">Explore Collection</a>
+          <a href="favorites.html" class="btn btn-secondary">View Favorites</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">Featured Pieces</div>
+        <h2 class="section-title">Signature Gothic Jewelry</h2>
+        <p class="section-desc">
+          Each piece is forged with elegance and darkness, crafted to enchant and empower.
+        </p>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://i.pinimg.com/1200x/eb/55/38/eb55380e94a423767fc08a6dcafc813f.jpg" alt="Black Rose Ring" />
+          </div>
+          <div class="product-info">
+            <div class="product-tag">BESTSELLER</div>
+            <h3 class="product-title">Black Rose Ring</h3>
+            <p class="product-desc">
+              A dark rose centerpiece wrapped in silver thorns. Symbol of mystery and devotion.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">Rs. 2,999</div>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://i.pinimg.com/1200x/b1/4b/3e/b14b3e34a1c18b48de1b5b082e797639.jpg" alt="Skull Pendant" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Skull Pendant</h3>
+            <p class="product-desc">
+              Antique silver skull with obsidian eyes. A bold statement of eternal strength.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">Rs. 4,999</div>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://i.pinimg.com/1200x/2a/12/b7/2a12b77d30013d94dfcb149537b22499.jpg" alt="Amethyst Choker" />
+          </div>
+          <div class="product-info">
+            <div class="product-tag">NEW</div>
+            <h3 class="product-title">Amethyst Choker</h3>
+            <p class="product-desc">
+              Velvet choker with a deep amethyst gem. Radiates mysticism and royal allure.
+            </p>
+            <div class="product-footer">
+              <div class="product-price">Rs. 7,999</div>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+
+        <div class="footer-column">
+          <h3>About Gothic Jewels</h3>
+          <p>
+            Curators of gothic elegance. Every piece tells a story of shadow, beauty, and rebellion.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Gothic Jewels, I8 Markaz</li>
+            <li><i class="fas fa-phone"></i> 0300-8432707</li>
+            <li><i class="fas fa-envelope"></i> gothicjewels@gmail.com</li>
+            <li><i class="fas fa-clock"></i> Mon–Sat: 11am – 9pm</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2025 Gothic Jewels. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

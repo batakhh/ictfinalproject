@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment | Gothic Jewels</title>
+  <link rel="stylesheet" href="goth.css" />
+</head>
+<body>
+  <main class="payment-container">
+    <h1 class="title">Payment</h1>
+
+    <!-- Cart Summary will be inserted here -->
+    <div id="cart-summary"></div>
+
+    <form class="payment-form">
+      <div class="form-group">
+        <label for="cardName">Name on Card</label>
+        <input type="text" id="cardName" placeholder="Full Name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expiry">Expiry Date</label>
+          <input type="text" id="expiry" placeholder="MM/YY" required />
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" placeholder="123" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="billing">Billing Address</label>
+        <input type="text" id="billing" placeholder="Street, City, ZIP" required />
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" id="country" placeholder="Pakistan" required />
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Pay Now</button>
+        <a href="cart.html" class="link">Back to Cart</a>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cartSummaryDiv = document.getElementById('cart-summary');
+      const cartData = JSON.parse(localStorage.getItem('cartData') || '[]');
+      const cartTotal = localStorage.getItem('cartTotal') || 0;
+
+      if (cartData.length > 0) {
+        const summaryDiv = document.createElement('div');
+        summaryDiv.classList.add('payment-summary');
+        summaryDiv.innerHTML = `<h3>Order Summary</h3>`;
+
+        cartData.forEach(item => {
+          const itemDiv = document.createElement('p');
+          itemDiv.textContent = `${item.title} x ${item.qty} - Rs. ${(item.price * item.qty).toLocaleString()}`;
+          summaryDiv.appendChild(itemDiv);
+        });
+
+        const totalDiv = document.createElement('p');
+        totalDiv.innerHTML = `<strong>Total: Rs. ${parseInt(cartTotal).toLocaleString()}</strong>`;
+        summaryDiv.appendChild(totalDiv);
+
+        cartSummaryDiv.appendChild(summaryDiv);
+      } else {
+        cartSummaryDiv.textContent = "Your cart is empty.";
+        document.querySelector('.payment-form button').disabled = true;
+      }
+    });
+  </script>
+</body>
+</html>
